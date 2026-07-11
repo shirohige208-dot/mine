@@ -728,45 +728,77 @@ margin-bottom:25px;
 color:#555;
 
 }
+
 /* ======================
-ENDING
+ENDING PAGE
 ======================*/
 
 .ending-page{
 
-background:linear-gradient(135deg,#ffd6e8,#fff2fa,#ffffff);
+    background:linear-gradient(135deg,#ffd6e8,#fff2fa,#ffffff);
 
-display:flex;
+    display:block;
 
-justify-content:center;
+    min-height:100vh;
 
-align-items:center;
+    overflow-y:auto;
+
+    overflow-x:hidden;
+
+    padding:40px 15px;
+
+}
+.ending-card{
+
+    width:800px;
+
+    max-width:100%;
+
+    background:white;
+
+    margin:30px auto;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+    animation:zoom 1s;
+
+}
+html{
+
+height:auto;
+
+scroll-behavior:smooth;
+
+}
+
+body{
 
 min-height:100vh;
 
-overflow:hidden;
+overflow-x:hidden;
+
+overflow-y:auto;
+
+}
+@media (max-width:768px){
+
+.ending-page{
+
+padding:25px 15px;
 
 }
 
 .ending-card{
 
-width:800px;
+padding:25px;
 
-max-width:92%;
-
-background:white;
-
-padding:45px;
-
-border-radius:25px;
-
-text-align:center;
-
-box-shadow:0 15px 35px rgba(0,0,0,.15);
-
-animation:zoom 1s;
-
-z-index:2;
+}
 
 }
 
@@ -934,4 +966,155 @@ transform:scale(1);
 
 }
 
+}
+/* ==========================
+   TABLET
+========================== */
+
+@media screen and (max-width:768px){
+
+    body{
+        padding:20px;
+    }
+
+    .container{
+        width:100%;
+    }
+
+    h1{
+        font-size:30px;
+    }
+
+    h2{
+        font-size:22px;
+    }
+
+    p{
+        font-size:17px;
+        line-height:30px;
+    }
+
+    .card,
+    .ending-card{
+        width:100%;
+        padding:25px;
+    }
+
+    .bear{
+        width:80px;
+    }
+
+    .envelope{
+        width:180px;
+        height:120px;
+    }
+
+    .letter{
+        width:145px;
+        height:85px;
+        left:18px;
+        font-size:35px;
+    }
+
+    .top{
+        border-left:90px solid transparent;
+        border-right:90px solid transparent;
+        border-top:60px solid #ff6f9c;
+    }
+
+    .button-area{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .yes-btn,
+    .no-btn{
+        width:100%;
+    }
+
+}
+/* ==========================
+   HP
+========================== */
+
+@media screen and (max-width:480px){
+
+    body{
+        padding:15px;
+    }
+
+    h1{
+        font-size:26px;
+    }
+
+    h2{
+        font-size:20px;
+    }
+
+    p{
+        font-size:16px;
+        line-height:28px;
+    }
+
+    .bear{
+        width:70px;
+    }
+
+    .card,
+    .ending-card{
+        width:100%;
+        padding:20px;
+        border-radius:18px;
+    }
+
+    .gallery{
+        grid-template-columns:1fr;
+        gap:15px;
+    }
+
+    .photo-card img{
+        height:220px;
+    }
+
+    .countdown-container{
+        gap:10px;
+    }
+
+    .time-box{
+        width:70px;
+        height:70px;
+    }
+
+    .time-box span{
+        font-size:24px;
+    }
+
+    .time-box small{
+        font-size:12px;
+    }
+
+    .sun{
+        width:80px;
+        height:80px;
+        right:20px;
+        top:20px;
+    }
+
+    .cloud{
+        transform:scale(.7);
+    }
+
+    .pantai-text{
+        font-size:18px;
+        line-height:30px;
+    }
+
+}
+img{
+    max-width:100%;
+    height:auto;
+    display:block;
+}
+.gallery{
+    grid-template-columns:1fr;
 }
