@@ -1,0 +1,937 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins,sans-serif;
+}
+
+body{
+    min-height:100vh;
+    overflow-x:hidden;
+    overflow-y:auto;
+    
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(135deg,#ffd6e7,#ffeaf5,#ffffff);
+
+}
+
+.container{
+
+    text-align:center;
+
+    z-index:2;
+
+}
+
+h1{
+
+    color:#ff3d7f;
+
+    margin-top:20px;
+
+}
+
+p{
+
+    color:#555;
+
+    margin-bottom:40px;
+
+}
+
+/* Bear */
+
+.bear{
+
+    width:100px;
+
+    animation:goyang 2s infinite;
+
+}
+
+@keyframes goyang{
+
+0%{
+
+transform:rotate(-4deg);
+
+}
+
+50%{
+
+transform:rotate(4deg);
+
+}
+
+100%{
+
+transform:rotate(-4deg);
+
+}
+
+}
+
+/* Envelope */
+
+.envelope{
+
+    width:220px;
+
+    height:140px;
+
+    background:#ff8fb2;
+
+    margin:auto;
+
+    position:relative;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+    border-radius:10px;
+
+    box-shadow:0 15px 30px rgba(0,0,0,.2);
+
+}
+
+.envelope:hover{
+
+transform:scale(1.1);
+
+}
+
+.top{
+
+    width:0;
+
+    height:0;
+
+    border-left:110px solid transparent;
+
+    border-right:110px solid transparent;
+
+    border-top:75px solid #ff6f9c;
+
+    position:absolute;
+
+    top:0;
+
+    transform-origin:top;
+
+    transition:1s;
+
+}
+
+.envelope:hover .top{
+
+transform:rotateX(180deg);
+
+}
+
+.letter{
+
+    position:absolute;
+
+    width:180px;
+
+    height:100px;
+
+    background:white;
+
+    left:20px;
+
+    top:20px;
+
+    border-radius:10px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:45px;
+
+    transition:.8s;
+
+}
+
+.envelope:hover .letter{
+
+transform:translateY(-30px);
+
+}
+
+/* Bunga */
+
+.flower{
+
+position:absolute;
+
+font-size:10px;
+
+animation:fall linear infinite;
+
+}
+
+@keyframes fall{
+
+0%{
+
+transform:translateY(-100px) rotate(0);
+
+}
+
+100%{
+
+transform:translateY(120vh) rotate(360deg);
+
+}
+
+}
+
+/* Love */
+
+.heart{
+
+position:absolute;
+
+font-size:20px;
+
+animation:loveUp linear infinite;
+
+}
+
+@keyframes loveUp{
+
+0%{
+
+transform:translateY(100vh);
+
+opacity:0;
+
+}
+
+50%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-120px);
+
+opacity:0;
+
+}
+
+}
+/* ========================= */
+/* HALAMAN SURAT */
+/* ========================= */
+
+.card{
+
+width:700px;
+
+max-width:90%;
+
+background:white;
+
+padding:40px;
+
+border-radius:20px;
+
+box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+animation:zoom .8s;
+
+}
+
+@keyframes zoom{
+
+from{
+
+transform:scale(.5);
+
+opacity:0;
+
+}
+
+to{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}
+
+.card h1{
+
+margin-bottom:25px;
+
+color:#ff3d7f;
+
+}
+
+.card p{
+
+font-size:20px;
+
+line-height:35px;
+
+min-height:220px;
+
+}
+
+.button-area{
+
+margin-top:35px;
+
+display:flex;
+
+justify-content:center;
+
+gap:30px;
+
+flex-wrap:wrap;
+
+}
+
+.yes-btn{
+
+background:#ff5b9f;
+
+color:white;
+
+padding:15px 35px;
+
+border:none;
+
+border-radius:50px;
+
+font-size:18px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.yes-btn:hover{
+
+transform:scale(1.1);
+
+background:#ff347f;
+
+}
+
+.no-btn{
+
+background:#999;
+
+color:white;
+
+padding:15px 35px;
+
+border:none;
+
+border-radius:50px;
+
+font-size:18px;
+
+cursor:pointer;
+
+position:relative;
+
+transition:.2s;
+
+}
+
+.no-btn:hover{
+
+background:#777;
+
+}
+/* ========================= */
+/* HALAMAN PANTAI */
+/* ========================= */
+
+.beach-page{
+
+background:linear-gradient(
+180deg,
+#87CEEB 0%,
+#BDEFFF 45%,
+#FFE7A6 70%,
+#F9D29D 100%
+);
+
+overflow:hidden;
+
+}
+
+/* Matahari */
+
+.sun{
+
+width:120px;
+
+height:120px;
+
+background:#FFD93D;
+
+border-radius:50%;
+
+position:absolute;
+
+top:60px;
+
+right:100px;
+
+box-shadow:0 0 60px #FFD93D;
+
+animation:sunFloat 4s infinite ease-in-out;
+
+}
+
+@keyframes sunFloat{
+
+0%{transform:translateY(0);}
+50%{transform:translateY(-10px);}
+100%{transform:translateY(0);}
+
+}
+
+/* Awan */
+
+.cloud{
+
+position:absolute;
+
+background:white;
+
+width:140px;
+
+height:50px;
+
+border-radius:50px;
+
+opacity:.9;
+
+animation:cloudMove 30s linear infinite;
+
+}
+
+.cloud::before{
+
+content:"";
+
+position:absolute;
+
+width:70px;
+
+height:70px;
+
+background:white;
+
+border-radius:50%;
+
+left:15px;
+
+top:-30px;
+
+}
+
+.cloud::after{
+
+content:"";
+
+position:absolute;
+
+width:80px;
+
+height:80px;
+
+background:white;
+
+border-radius:50%;
+
+right:15px;
+
+top:-40px;
+
+}
+
+.c1{
+
+top:70px;
+
+left:-200px;
+
+animation-duration:30s;
+
+}
+
+.c2{
+
+top:180px;
+
+left:-350px;
+
+animation-duration:40s;
+
+}
+
+.c3{
+
+top:290px;
+
+left:-150px;
+
+animation-duration:35s;
+
+}
+
+@keyframes cloudMove{
+
+from{
+
+transform:translateX(0);
+
+}
+
+to{
+
+transform:translateX(1700px);
+
+}
+
+}
+
+.pantai-text{
+
+font-size:22px;
+
+line-height:40px;
+
+color:#444;
+
+}
+/* =======================
+HALAMAN BIOSKOP
+=======================*/
+
+.cinema-page{
+
+background:linear-gradient(180deg,#232526,#414345);
+
+color:white;
+
+overflow:hidden;
+
+}
+
+.ending{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:linear-gradient(135deg,#ffb6d5,#ffd6eb,#fff5fa);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+text-align:center;
+
+padding:40px;
+
+animation:fade 1s;
+
+z-index:999;
+
+}
+
+.hidden{
+
+display:none;
+
+}
+
+.ending h1{
+
+font-size:60px;
+
+color:#ff3d7f;
+
+margin-bottom:20px;
+
+}
+
+.ending h2{
+
+margin-bottom:25px;
+
+color:#ff5f99;
+
+}
+
+.ending p{
+
+max-width:700px;
+
+font-size:22px;
+
+line-height:40px;
+
+color:#444;
+
+}
+
+/* Confetti */
+
+.confetti{
+
+position:absolute;
+
+font-size:25px;
+
+animation:confettiFall linear forwards;
+
+}
+
+@keyframes confettiFall{
+
+0%{
+
+transform:translateY(-100px) rotate(0);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(110vh) rotate(720deg);
+
+opacity:0;
+
+}
+
+}
+
+/* Balon */
+
+.balloon{
+
+position:absolute;
+
+font-size:35px;
+
+animation:balloonUp linear infinite;
+
+}
+
+@keyframes balloonUp{
+
+0%{
+
+transform:translateY(120vh);
+
+}
+
+100%{
+
+transform:translateY(-150px);
+
+}
+
+}
+/* ===========================
+GALERI
+=========================== */
+
+.gallery-page{
+
+background:linear-gradient(135deg,#ffd6ea,#fff5fb);
+
+overflow-x:hidden;
+
+}
+
+/* ===========================
+   GALERI FOTO
+=========================== */
+
+.gallery{
+    width: 100%;
+    max-width: 900px;
+    margin: 30px auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.gallery img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+    transition: .4s;
+    cursor: pointer;
+}
+
+.gallery img:hover{
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(0,0,0,.25);
+}
+
+.gallery img:hover{
+
+transform:scale(1.08);
+
+box-shadow:0 20px 35px rgba(0,0,0,.25);
+
+}
+
+.gallery-text{
+
+font-size:20px;
+
+margin-top:20px;
+
+margin-bottom:25px;
+
+color:#555;
+
+}
+/* ======================
+ENDING
+======================*/
+
+.ending-page{
+
+background:linear-gradient(135deg,#ffd6e8,#fff2fa,#ffffff);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+min-height:100vh;
+
+overflow:hidden;
+
+}
+
+.ending-card{
+
+width:800px;
+
+max-width:92%;
+
+background:white;
+
+padding:45px;
+
+border-radius:25px;
+
+text-align:center;
+
+box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+animation:zoom 1s;
+
+z-index:2;
+
+}
+
+.ending-card h1{
+
+font-size:50px;
+
+color:#ff3d7f;
+
+margin-bottom:20px;
+
+}
+
+.ending-card h2{
+
+color:#ff5d92;
+
+margin-bottom:20px;
+
+}
+
+.ending-card p{
+
+font-size:22px;
+
+line-height:40px;
+
+color:#555;
+
+margin-bottom:30px;
+
+}
+
+#countdown{
+
+margin:25px 0;
+
+color:#ff3d7f;
+
+font-size:28px;
+
+}
+.photo-card{
+    background: white;
+    padding: 10px;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+    transition: .3s;
+}
+
+.photo-card:hover{
+    transform: translateY(-8px);
+}
+
+.photo-card img{
+    width: 100%;
+    height: 180px;      /* diperkecil */
+    object-fit: cover;
+    border-radius: 12px;
+}
+.photo-card p{
+    margin-top:8px;
+    font-size:14px;
+    color:#666;
+    text-align:center;
+}
+@media (max-width:768px){
+
+.gallery{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.photo-card img{
+
+height:150px;
+
+}
+
+}
+
+@media (max-width:480px){
+
+.gallery{
+
+grid-template-columns:1fr;
+
+}
+
+.photo-card img{
+
+height:220px;
+
+}
+
+}
+/* ===========================
+COUNTDOWN
+=========================== */
+
+.countdown-container{
+
+display:flex;
+justify-content:center;
+gap:18px;
+flex-wrap:wrap;
+margin-top:25px;
+
+}
+
+.time-box{
+
+width:110px;
+height:110px;
+
+background:linear-gradient(135deg,#ff4f8b,#ff7eb3);
+
+border-radius:20px;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+color:white;
+
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+animation:pulse 1.5s infinite;
+
+}
+
+.time-box span{
+
+font-size:34px;
+font-weight:bold;
+
+}
+
+.time-box small{
+
+margin-top:8px;
+font-size:16px;
+
+}
+
+@keyframes pulse{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.05);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
